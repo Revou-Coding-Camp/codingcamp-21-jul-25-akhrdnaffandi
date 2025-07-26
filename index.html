@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-mode"> <div class="container">
+        <h1> TO-DO LIST</h1>
+
+        <div class="stats-grid">
+            <div class="stat-card total">
+                <i class="fas fa-clipboard-list stat-icon"></i>
+                <div class="stat-info">
+                    <span class="stat-value" id="totalTasksCount">0</span>
+                    <span class="stat-label">Total Tasks</span>
+                </div>
+            </div>
+            <div class="stat-card pending">
+                <i class="fas fa-clock stat-icon"></i>
+                <div class="stat-info">
+                    <span class="stat-value" id="pendingTasksCount">0</span>
+                    <span class="stat-label">Pending</span>
+                </div>
+            </div>
+            <div class="stat-card completed">
+                <i class="fas fa-calendar-check stat-icon"></i>
+                <div class="stat-info">
+                    <span class="stat-value" id="completedTasksCount">0</span>
+                    <span class="stat-label">Completed</span>
+                </div>
+            </div>
+            <div class="stat-card progress">
+                <i class="fas fa-chart-pie stat-icon"></i>
+                <div class="stat-info">
+                    <span class="stat-value" id="progressPercentage">0%</span>
+                    <span class="stat-label">Progress</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-input-area">
+            <input type="text" id="todoInput" class="app-input" placeholder="Add a new task...">
+            <input type="date" id="dateInput" class="app-input">
+            <button id="addTodoBtn" class="app-btn primary-btn"><i class="fas fa-plus"></i>Add Task</button>
+        </div>
+        <div>
+            <div class="task-input-area">
+                <input type="text" id="todoDesc" class="app-input" placeholder="Add a task description...">
+            </div>
+        </div>
+
+        <div class="controls-area">
+            <div class="search-box-modern">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search task...">
+            </div>
+            <div class="task-list-controls">
+                <button id="filterBtn" class="app-btn secondary-btn"><i class="fas fa-filter"></i> Filter</button>
+                <button id="sortBtn" class="app-btn tertiary-btn"><i class="fas fa-sort"></i> Sort</button>
+                <button id="deleteAllBtn" class="app-btn danger-btn"><i class="fas fa-trash"></i> Delete All</button>
+            </div>    
+        </div>
+
+
+        <div class="task-list-display">
+            <div class="list-header">
+                <div class="header-col">Task</div>
+                <div class="header-col">Description</div>
+                <div class="header-col">Due Date</div>
+                <div class="header-col">Status</div>
+                <div class="header-col action-col">Actions</div>
+            </div>
+            <!-- Empty State -->
+            <div id="taskList" class="task-items-wrapper">
+                <p id="noTasksMessage" class="empty-list-message">No task available!</p>
+            </div>
+        </div>
+        <div id="alertBox" class="alert-box">Notifikasi</div>
+
+        <div id="confirmBox" class="confirm-box">
+            <div class="confirm-content">
+              <p id="confirmMessage">Apakah kamu yakin?</p>
+              <div class="confirm-buttons">
+                <button id="confirmYes" class="btn-yes">Iya</button>
+                <button id="confirmNo" class="btn-no">Batal</button>
+              </div>
+            </div>
+          </div>
+          
+
+    <script src="js/script.js"></script>
+</body>
+</html>
